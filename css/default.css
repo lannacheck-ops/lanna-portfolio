@@ -1,0 +1,68 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#wrapper {
+    /* width: 100%; */
+    /* margin-right: auto;
+    margin-left: auto; */
+
+}
+
+/* NAV BAR */
+
+nav {
+    height: 80px;
+    background: black;
+    display: grid;
+    grid-template-columns: 60% 1fr;
+}
+
+/* NAV TEXT */
+nav a {
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+/* LOGO */
+.logo {
+    text-align: left;
+    display: flex;
+    margin-left: 10px;
+}
+
+.logo a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    position: relative;
+    top: -5%;
+    max-width: 7%;
+}
+
+
+
+/* MENU RIGHT */
+.menu1 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* Displays the menu horizontally */
+.menu1 a {
+    display: block;
+}
+
+.hamburger-menu {
+    display: none;
+    /*Hdden by default, will be shown on mobile*/
+    align-items: center;
+    justify-content: center;
+}
