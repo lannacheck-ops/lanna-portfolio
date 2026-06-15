@@ -8,19 +8,23 @@ body {
 }
 
 #wrapper {
-    margin-bottom: 0;
-
+    padding-top: 80px;
 }
 
 /* NAV BAR */
 
 nav {
+    position: fixed;
+    top: 0;
+    left: 0;
     height: 80px;
+    width: 100%;
     padding-right: 10px;
     /* margin-bottom: 5px; */
     background: black;
     display: grid;
     grid-template-columns: 60% 1fr;
+    z-index: 1000;
 }
 
 /* NAV TEXT */
@@ -96,9 +100,8 @@ nav a {
     inset: 0;
 
     background: url("../assets/twist-and-turns.png") center/cover no-repeat;
-
-    opacity: 0.3;
     /*controls image opacity */
+    opacity: 0.3;
 
     z-index: 0;
 }
@@ -126,4 +129,67 @@ nav a {
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+/* ABOUT ME INTRO */
+
+
+.intro-about-me {
+    background: rgb(255, 221, 85);
+    height: 600px;
+    padding: 40px;
+
+    display: grid;
+    grid-template-columns: 65% 1fr;
+    gap: 40px;
+
+    align-items: center;
+    padding-right: 50px;
+}
+
+.about-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* centers h2 + p horizontally */
+    text-align: center;
+    /* centers text inside */
+}
+
+h2 {
+    color: black;
+    font-family: "Monofett", monospace;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 4rem;
+}
+
+.about-text h2 {
+    text-align: left;
+    margin: 0 0 20px 0;
+}
+
+.about-text p {
+    color: rgb(80, 76, 76);
+    font-size: 25px;
+    max-width: 950px;
+}
+
+.about-image img {
+    height: 600px;
+    border-radius: 30px;
+}
+
+/* Animating the section to slide up */
+.about-text,
+.about-image {
+    opacity: 0;
+    transform: translateY(60px);
+    transition: all 1.5s cubic-bezier(.22, 1, .36, 1);
+}
+
+.about-text.show,
+.about-image.show {
+    opacity: 1;
+    transform: translateY(0);
 }
