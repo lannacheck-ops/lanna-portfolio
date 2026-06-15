@@ -77,17 +77,35 @@ nav a {
 
 /* INTRO BLOCK */
 .intro {
-    background: black;
+    position: relative;
     height: calc(100vh - 80px);
+
     display: flex;
-    justify-content: center;
     /* horizontal centering */
-    align-items: center;
+    justify-content: center;
     /* vertical centering */
+    align-items: center;
+
     text-align: center;
+    overflow: hidden;
+}
+
+.intro::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: url("../assets/twist-and-turns.png") center/cover no-repeat;
+
+    opacity: 0.3;
+    /*controls image opacity */
+
+    z-index: 0;
 }
 
 .intro p {
+    position: relative;
+    z-index: 2;
     margin: 0;
     color: white;
     font-size: 6rem;
