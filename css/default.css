@@ -20,6 +20,7 @@ nav {
     height: 80px;
     width: 100%;
     padding-right: 10px;
+    box-sizing: border-box;
     /* margin-bottom: 5px; */
     background: black;
     display: grid;
@@ -137,14 +138,16 @@ nav a {
 .intro-about-me {
     background: rgb(255, 221, 85);
     height: 600px;
+    width: 100%;
     padding: 40px;
+    box-sizing: border-box;
 
     display: grid;
-    grid-template-columns: 65% 1fr;
+    grid-template-columns: 60% 1fr;
     gap: 40px;
 
     align-items: center;
-    padding-right: 50px;
+    /* padding-right: 50px; */
 }
 
 .about-text {
@@ -176,7 +179,8 @@ h2 {
 }
 
 .about-image img {
-    height: 600px;
+    width: 100%;
+    height: auto;
     border-radius: 30px;
 }
 
@@ -196,35 +200,49 @@ h2 {
 
 /* FAV WORKS SECTION */
 .fav-works {
-    height: 600px;
-    max-width: 100%;
+    width: 100%;
     padding: 100px;
+    box-sizing: border-box;
 
     display: grid;
     grid-template-columns: 1fr 1fr;
-    align-items: center;
-    gap: 100px;
+    gap: 40px;
+    align-items: start;
+
+
+    /* ANIMATION */
+    opacity: 0;
+    transform: translateY(100px);
+    transition: all 1.5s cubic-bezier(.22, 1, .36, 1);
+}
+
+.fav-works.show {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .fav-works a {
     text-decoration: none;
+    color: inherit;
 }
 
 .fav-works figure {
+    margin: 0;
+
     display: flex;
     flex-direction: column;
     align-items: center;
+
     cursor: pointer;
-    margin: 0;
 }
 
 .im {
     width: 100%;
-    height: auto;
+    display: block;
+
     aspect-ratio: 1.3 / 1;
     object-fit: cover;
-    box-sizing: border-box;
-    display: block;
+
     border-radius: 50px;
 }
 
@@ -238,11 +256,13 @@ h2 {
     font-family: "Monofett", monospace;
     font-weight: 400;
     font-style: normal;
-    font-size: 2.5rem;
+    font-size: 2.3rem;
 }
 
 /* adding a comment */
 .im-description p {
+    margin: 0;
+    padding: 0;
     color: white;
-    font-size: 20px;
+    font-size: 1.2em;
 }
