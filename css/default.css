@@ -137,7 +137,7 @@ nav a {
 
 .intro-about-me {
     background: rgb(255, 221, 85);
-    height: 600px;
+    min-height: 600px;
     width: 100%;
     padding: 40px;
     box-sizing: border-box;
@@ -200,14 +200,15 @@ h2 {
 
 /* FAV WORKS SECTION */
 .fav-works {
-    width: 100%;
+    width: 87%;
     padding: 100px;
     box-sizing: border-box;
 
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 40px;
-    align-items: start;
+    justify-self: center;
+    align-items: center;
 
 
     /* ANIMATION */
