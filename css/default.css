@@ -8,7 +8,7 @@ body {
 }
 
 #wrapper {
-    padding-top: 80px;
+    padding-top: 60px;
 }
 
 /* NAV BAR */
@@ -17,7 +17,7 @@ nav {
     position: fixed;
     top: 0;
     left: 0;
-    height: 80px;
+    height: 60px;
     width: 100%;
     padding-right: 10px;
     box-sizing: border-box;
@@ -32,7 +32,7 @@ nav {
 nav a {
     color: white;
     text-decoration: none;
-    font-size: 26px;
+    font-size: 20px;
 }
 
 /* LOGO */
@@ -51,7 +51,8 @@ nav a {
 .logo img {
     position: relative;
     top: -8%;
-    max-width: 8%;
+    height: 40px;
+    width: auto;
 }
 
 /* MENU RIGHT */
@@ -83,7 +84,7 @@ nav a {
 /* INTRO BLOCK */
 .intro {
     position: relative;
-    height: calc(100vh - 80px);
+    height: calc(100vh - 60px);
 
     display: flex;
     /* horizontal centering */
@@ -112,7 +113,7 @@ nav a {
     z-index: 2;
     margin: 0;
     color: white;
-    font-size: 6rem;
+    font-size: 120px;
 
     opacity: 0;
     transform: translateY(100px);
@@ -164,7 +165,7 @@ h2 {
     font-family: "Monofett", monospace;
     font-weight: 400;
     font-style: normal;
-    font-size: 4rem;
+    font-size: 80px;
 }
 
 .about-text h2 {
@@ -174,7 +175,7 @@ h2 {
 
 .about-text p {
     color: rgb(80, 76, 76);
-    font-size: 25px;
+    font-size: 24px;
     max-width: 950px;
 }
 
@@ -222,7 +223,7 @@ h2 {
     padding: 70px;
     gap: 40px;
 
-    align-items: center;
+    /* align-items: center; */
 }
 
 .fav-works.show {
@@ -278,7 +279,7 @@ h2 {
     font-family: "Monofett", monospace;
     font-weight: 400;
     font-style: normal;
-    font-size: 2.3rem;
+    font-size: 32px;
     margin-top: 20px;
     margin-bottom: 12px;
 }
@@ -287,5 +288,5 @@ h2 {
     margin: 0;
     padding: 0;
     color: white;
-    font-size: 1.2em;
+    font-size: 18px;
 }
